@@ -1,0 +1,19 @@
+DB_NAME=ai_video_portal_db
+DB_USER=ai_video_portal_user
+DB_PASSWORD='......................'
+DB_HOST=localhost
+DB_PORT=3306
+SECRET_KEY='.................'
+DEBUG=True
+ALLOWED_HOSTS=*
+
+
+
+RECAPTCHA_PUBLIC_KEY='your_site_key'
+RECAPTCHA_PRIVATE_KEY='your_secret_key'
+
+
+NOTIFICATION_BCC_RECIPIENTS = 'admin email(s), comma separated; or any other email you want to receive a copy of the email sent to the user'
+
+
+BASE_URL='http://localhost:8000'
