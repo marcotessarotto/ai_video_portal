@@ -8,6 +8,8 @@ DEBUG=True
 ALLOWED_HOSTS=*
 
 
+HAYSTACK_SERVER_URL='http://127.0.0.1:9200/'
+
 
 RECAPTCHA_PUBLIC_KEY='your_site_key'
 RECAPTCHA_PRIVATE_KEY='your_secret_key'

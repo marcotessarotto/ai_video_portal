@@ -15,3 +15,5 @@ django-ckeditor-filebrowser-filer
 openpyxl
 celery[redis]
 pandas
+django-haystack
+elasticsearch

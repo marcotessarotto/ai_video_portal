@@ -40,6 +40,8 @@ DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS').split(',')
 
+HAYSTACK_SERVER_URL = env('HAYSTACK_SERVER_URL', default='http://127.0.0.1:9200/')
+
 RECAPTCHA_PRIVATE_KEY = env('RECAPTCHA_PRIVATE_KEY')
 RECAPTCHA_PUBLIC_KEY = env('RECAPTCHA_PUBLIC_KEY')
 
@@ -87,7 +89,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_recaptcha',
-    # 'core',
+    'core',
     'bootstrap5',
     'ckeditor',
     'ckeditor_uploader',
@@ -143,6 +145,15 @@ DATABASES = {
         # https://code.djangoproject.com/ticket/18392
     }
 }
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+        'URL': HAYSTACK_SERVER_URL,
+        'INDEX_NAME': 'haystack_transcripts',
+    },
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

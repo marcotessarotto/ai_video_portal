@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ video.title }}</title>
+</head>
+<body>
+    <h1>{{ video.title }}</h1>
+    <p>{{ video.description }}</p>
+    <video controls src="{{ video.video_file.url }}">Video playback is not supported by your browser.</video>
+    <!-- Transcript -->
+    <h2>Transcript</h2>
+    <p>{{ video.transcript.content }}</p>
+</body>
+</html>
